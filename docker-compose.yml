@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  application-db:
+    image: postgres:12-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=application-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
